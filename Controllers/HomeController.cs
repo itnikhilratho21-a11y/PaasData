@@ -12,9 +12,25 @@ namespace PaasData.Controllers
         public ActionResult Index()
         {
             ViewData["name"] = "Niksky tech Pvt Ltd";
+            ViewBag.Email = "nikskytech@gmail.com";
+            TempData["address"] = "Tejaji Nagar near bridge indore";
+
+
             return View();
 
-//
+        }
+        public ActionResult Index2()
+        {
+            return View();
+
+        }
+        
+        public ActionResult Index3()
+        {
+            int number = 100000;
+
+            return View("index3",number);
+
         }
     }
 }

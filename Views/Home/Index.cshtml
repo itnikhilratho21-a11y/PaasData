@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+
 <div>
     <h3>  Indext container View </h3>
     <input  type="text" /> <input type="button" />
@@ -16,3 +16,12 @@
 
 <hr />
 <p> Data from viewData:@ViewData["name"]</p>
+<p>Data from Viewbag: @ViewBag.Email</p>
+<p>Data from Tempdata: @TempData["address"]</p>
+@{ 
+TempData.Keep("adress");
+}
+<p>Data from Tempdata : @TempData.Peek("address")</p>
+<br />
+<hr />
+<p> Welcome to niksky tech companay </p>
