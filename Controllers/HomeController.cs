@@ -1,6 +1,9 @@
-﻿using System;
+﻿using PaasData.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -31,6 +34,11 @@ namespace PaasData.Controllers
 
             return View("index3",number);
 
+        }
+        public ActionResult Index4()
+        {
+            Product p = new Product() { Id = 10, Name = "Nikhil", Price = 599 };
+            return View(p);
         }
     }
 }
