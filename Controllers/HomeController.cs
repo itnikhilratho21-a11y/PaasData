@@ -37,8 +37,24 @@ namespace PaasData.Controllers
         }
         public ActionResult Index4()
         {
-            Product p = new Product() { Id = 10, Name = "Nikhil", Price = 599 };
+            Product p = new Product() { Id = 10, Name = "Pent", Price = 599 };
             return View(p);
+        }
+        public ActionResult Index5()
+        {
+            int number1 = 2303;
+            return View("Index5",number1);
+        } 
+        public ActionResult Index6()
+        {
+            List<Product> products = new List<Product>()
+            {
+                new Product(){Id =1, Name ="Shirt",Price=123},
+                new Product(){Id =2,Name="N Shirt",Price=211},
+                new Product(){Id =3,Name="R Name Shirt",Price=403}
+            };
+            return View(products);
+            
         }
     }
 }

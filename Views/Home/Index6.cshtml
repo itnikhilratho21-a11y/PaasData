@@ -1,0 +1,22 @@
+﻿
+@using PaasData.Models
+@model  List<Product>
+
+<h2>Index6 Page</h2>
+<div><h3>All Product </h3></div>
+<table border="0">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (Product item in Model)
+    {
+
+     <tr>
+         <th>@item.Id</th>
+         <th>@item.Name</th>
+         <th>@item.Price</th>
+     </tr>
+    }
+</table>
