@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PaasData.Models.Product>
+
+
+<h2>ProductController Index</h2>
+
+<body>
+   <p>@Html.ActionLink("Create new","Create")</p>
+    <table class="table" border="1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Price)
+
+            </th>
+        </tr>
+        @foreach(var item in Model)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Name)
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.ActionLink("Edit", "Edit", new {id=item.Id})
+                    </th>
+                </tr>
+            }
+    </table>
+</body>
+
+
